@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'transit'
+
+
+
+tr = Driveornot::Transit.new(STDOUT)
+
+tr.start
+
+# while option = gets.chomp
+#   tr.start
+# end
