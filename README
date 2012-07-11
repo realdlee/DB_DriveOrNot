@@ -1,0 +1,12 @@
+Hello,
+
+Welcome to Drive or Not.
+
+To use this app follow these steps:
+
+1.  git clone your repo
+2.  perform bundle install
+3.  rspec my_tests_spec.rb --color
+4.  ruby wrapperthing.rb
+
+
