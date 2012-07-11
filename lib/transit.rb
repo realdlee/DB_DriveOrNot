@@ -156,11 +156,5 @@ module Driveornot
         def get_url(uri)
           Net::HTTP.get(uri)
         end
-
-        def station
-
-
-        end
-
   end
 end

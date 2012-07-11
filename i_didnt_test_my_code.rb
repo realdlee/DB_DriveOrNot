@@ -1,4 +1,4 @@
-require 'open-uri'
+#require 'open-uri'
 require 'nokogiri'
 
 # doc = open("http://maps.googleapis.com/maps/api/directions/json?origin=1524+

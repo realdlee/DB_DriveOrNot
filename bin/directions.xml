@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DirectionsResponse>
+ <status>OK</status>
+ <route>
+  <leg>
+   <step>
+    <travel_mode>WALKING</travel_mode>
+    <start_location>
+     <lat>37.7924300</lat>
+     <lng>-122.4061600</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7892600</lat>
+     <lng>-122.4014100</lng>
+    </end_location>
+    <polyline>
+     <points>uiteFnmbjVEk@Ey@_@sFMwB[oE@?~De@vDe@bDs@tDS?S?OBGBI@Q?KMk@</points>
+    </polyline>
+    <duration>
+     <value>544</value>
+     <text>9 mins</text>
+    </duration>
+    <html_instructions>Walk to Montgomery St.</html_instructions>
+    <distance>
+     <value>747</value>
+     <text>0.5 mi</text>
+    </distance>
+    <step>
+     <travel_mode>WALKING</travel_mode>
+     <start_location>
+      <lat>37.7924300</lat>
+      <lng>-122.4061600</lng>
+     </start_location>
+     <end_location>
+      <lat>37.7928600</lat>
+      <lng>-122.4027900</lng>
+     </end_location>
+     <polyline>
+      <points>uiteFnmbjVEk@Ey@_@sFMwB[oE</points>
+     </polyline>
+     <duration>
+      <value>180</value>
+      <text>3 mins</text>
+     </duration>
+     <html_instructions>Head &lt;b&gt;east&lt;/b&gt; on &lt;b&gt;California St&lt;/b&gt; toward &lt;b&gt;Grant Ave&lt;/b&gt;</html_instructions>
+     <distance>
+      <value>300</value>
+      <text>0.2 mi</text>
+     </distance>
+    </step>
+    <step>
+     <travel_mode>WALKING</travel_mode>
+     <start_location>
+      <lat>37.7928600</lat>
+      <lng>-122.4027900</lng>
+     </start_location>
+     <end_location>
+      <lat>37.7892400</lat>
+      <lng>-122.4020500</lng>
+     </end_location>
+     <polyline>
+      <points>klteFlxajV@?~De@vDe@bDs@tDS</points>
+     </polyline>
+     <duration>
+      <value>334</value>
+      <text>6 mins</text>
+     </duration>
+     <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Montgomery St&lt;/b&gt;</html_instructions>
+     <distance>
+      <value>408</value>
+      <text>0.3 mi</text>
+     </distance>
+    </step>
+    <step>
+     <travel_mode>WALKING</travel_mode>
+     <start_location>
+      <lat>37.7892400</lat>
+      <lng>-122.4020500</lng>
+     </start_location>
+     <end_location>
+      <lat>37.7892600</lat>
+      <lng>-122.4014100</lng>
+     </end_location>
+     <polyline>
+      <points>wuseFxsajV?S?OBGBI@Q?KMk@</points>
+     </polyline>
+     <duration>
+      <value>30</value>
+      <text>1 min</text>
+     </duration>
+     <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Market St&lt;/b&gt;</html_instructions>
+     <distance>
+      <value>39</value>
+      <text>128 ft</text>
+     </distance>
+    </step>
+   </step>
+   <step>
+    <travel_mode>TRANSIT</travel_mode>
+    <start_location>
+     <lat>37.7892600</lat>
+     <lng>-122.4014100</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7329200</lat>
+     <lng>-122.4340900</lng>
+    </end_location>
+    <polyline>
+     <points>{useFxoajVtY`a@ba@bj@lyA`d@`oAsFxwBr`B</points>
+    </polyline>
+    <duration>
+     <value>600</value>
+     <text>10 mins</text>
+    </duration>
+    <html_instructions>Metro rail towards Daly City</html_instructions>
+    <distance>
+     <value>7202</value>
+     <text>4.5 mi</text>
+    </distance>
+    <transit_details>
+     <departure_stop>
+      <name>Montgomery St.</name>
+      <location>
+       <lat>37.7892560</lat>
+       <lng>-122.4014070</lng>
+      </location>
+     </departure_stop>
+     <arrival_stop>
+      <name>Glen Park</name>
+      <location>
+       <lat>37.7329210</lat>
+       <lng>-122.4340920</lng>
+      </location>
+     </arrival_stop>
+     <line>
+      <name>Dublin/Pleasanton - Daly City</name>
+      <url>http://www.bart.gov/schedules/bylineresults.aspx?route=11</url>
+      <vehicle>
+       <name>Metro rail</name>
+       <type>SUBWAY</type>
+       <icon>//maps.gstatic.com/mapfiles/transit/iw/6/metro.png</icon>
+       <local_icon>//maps.gstatic.com/mapfiles/transit/iw/6/us-ca-bart.png</local_icon>
+      </vehicle>
+      <agency>
+       <name>Bay Area Rapid Transit</name>
+       <url>http://www.bart.gov/</url>
+      </agency>
+      <color>#0099cc</color>
+     </line>
+     <num_stops>5</num_stops>
+     <headsign>Daly City</headsign>
+     <departure_time>
+      <value>1341965640</value>
+      <text>5:14pm</text>
+      <time_zone>America/Los_Angeles</time_zone>
+     </departure_time>
+     <arrival_time>
+      <value>1341966240</value>
+      <text>5:24pm</text>
+      <time_zone>America/Los_Angeles</time_zone>
+     </arrival_time>
+    </transit_details>
+   </step>
+   <step>
+    <travel_mode>WALKING</travel_mode>
+    <start_location>
+     <lat>37.7329200</lat>
+     <lng>-122.4340900</lng>
+    </start_location>
+    <end_location>
+     <lat>37.7364300</lat>
+     <lng>-122.4243400</lng>
+    </end_location>
+    <polyline>
+     <points>wuheF`|gjVk@b@iAUf@{DDg@BSHe@@CJg@@ADSBG?ADK?AFMBMJe@CWKm@IQWmAOu@IqBOkDOkDQiDWeGMMa@a@GG_AaAqCqCa@]OSMIKG{Bo@sA[</points>
+    </polyline>
+    <duration>
+     <value>882</value>
+     <text>15 mins</text>
+    </duration>
+    <html_instructions>Walk to 3772 Mission St, San Francisco, CA 94110, USA</html_instructions>
+    <distance>
+     <value>1108</value>
+     <text>0.7 mi</text>
+    </distance>
+    <step>
+     <travel_mode>WALKING</travel_mode>
+     <start_location>
+      <lat>37.7329200</lat>
+      <lng>-122.4340900</lng>
+     </start_location>
+     <end_location>
+      <lat>37.7335100</lat>
+      <lng>-122.4341600</lng>
+     </end_location>
+     <polyline>
+      <points>wuheF`|gjVk@b@iAU</points>
+     </polyline>
+     <duration>
+      <value>24</value>
+      <text>1 min</text>
+     </duration>
+     <html_instructions>Head &lt;b&gt;north&lt;/b&gt; on &lt;b&gt;Diamond St&lt;/b&gt; toward &lt;b&gt;Bosworth St&lt;/b&gt;</html_instructions>
+     <distance>
+      <value>43</value>
+      <text>141 ft</text>
+     </distance>
+    </step>
+    <step>
+     <travel_mode>WALKING</travel_mode>
+     <start_location>
+      <lat>37.7335100</lat>
+      <lng>-122.4341600</lng>
+     </start_location>
+     <end_location>
+      <lat>37.7336800</lat>
+      <lng>-122.4264000</lng>
+     </end_location>
+     <polyline>
+      <points>myheFn|gjVf@{DDg@BSHe@@CJg@@ADSBG?ADK?AFMBMJe@CWKm@IQWmAOu@IqBOkDOkDQiDWeG</points>
+     </polyline>
+     <duration>
+      <value>534</value>
+      <text>9 mins</text>
+     </duration>
+     <html_instructions>Turn &lt;b&gt;right&lt;/b&gt; onto &lt;b&gt;Bosworth St&lt;/b&gt;</html_instructions>
+     <distance>
+      <value>704</value>
+      <text>0.4 mi</text>
+     </distance>
+    </step>
+    <step>
+     <travel_mode>WALKING</travel_mode>
+     <start_location>
+      <lat>37.7336800</lat>
+      <lng>-122.4264000</lng>
+     </start_location>
+     <end_location>
+      <lat>37.7364300</lat>
+      <lng>-122.4243400</lng>
+     </end_location>
+     <polyline>
+      <points>ozheF~kfjVMMa@a@GG_AaAqCqCa@]OSMIKG{Bo@sA[</points>
+     </polyline>
+     <duration>
+      <value>324</value>
+      <text>5 mins</text>
+     </duration>
+     <html_instructions>Turn &lt;b&gt;left&lt;/b&gt; onto &lt;b&gt;Mission St&lt;/b&gt;</html_instructions>
+     <distance>
+      <value>361</value>
+      <text>0.2 mi</text>
+     </distance>
+    </step>
+   </step>
+   <duration>
+    <value>2026</value>
+    <text>34 mins</text>
+   </duration>
+   <distance>
+    <value>9057</value>
+    <text>5.6 mi</text>
+   </distance>
+   <start_location>
+    <lat>37.7924300</lat>
+    <lng>-122.4061600</lng>
+   </start_location>
+   <end_location>
+    <lat>37.7364300</lat>
+    <lng>-122.4243400</lng>
+   </end_location>
+   <start_address>717 California St, San Francisco, CA 94108, USA</start_address>
+   <end_address>3772 Mission St, San Francisco, CA 94110, USA</end_address>
+   <departure_time>
+    <value>1341965078</value>
+    <text>5:04pm</text>
+    <time_zone>America/Los_Angeles</time_zone>
+   </departure_time>
+   <arrival_time>
+    <value>1341967121</value>
+    <text>5:38pm</text>
+    <time_zone>America/Los_Angeles</time_zone>
+   </arrival_time>
+  </leg>
+  <copyrights>Map data ©2012 Google, Sanborn</copyrights>
+  <overview_polyline>
+   <points>uiteFnmbjVy@qMYoEvJkAbDs@tDS?c@FQ@]Mk@tY`a@ba@bj@lyA`d@`oAsFxwBr`Bk@b@iAUl@cFLy@TaAHWJ[Je@CWKm@IQg@cC{@sRWeGMMi@i@qEsEq@q@YQoEkA</points>
+  </overview_polyline>
+  <warning>Walking directions are in beta.    Use caution – This route may be missing sidewalks or pedestrian paths.</warning>
+  <bounds>
+   <southwest>
+    <lat>37.7329200</lat>
+    <lng>-122.4342700</lng>
+   </southwest>
+   <northeast>
+    <lat>37.7928500</lat>
+    <lng>-122.4014100</lng>
+   </northeast>
+  </bounds>
+ </route>
+</DirectionsResponse>
