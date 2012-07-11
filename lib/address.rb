@@ -1,4 +1,4 @@
-# class Ad# dress
+
 #   attr_accessor :location, :tag, :db
 #
 #   def initialize(location,tag)

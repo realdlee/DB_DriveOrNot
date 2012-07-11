@@ -1,8 +1,5 @@
 require 'net/http'
-
-#require 'json'
 require 'nokogiri'
-
 
 module Driveornot
   BART_API_KEY = "5SHZ-XLUS-U9U5-MN24"
@@ -14,17 +11,17 @@ module Driveornot
     end
 
     def start
-        @output.puts "Welcome to Drive Or Not!"
-        @output.puts "When are you leaving? Please enter in mm/dd/yy hh:mm format"
-        #@output.gets(Time.now)
-        @departure_time = gets.chomp
-        @output.puts "Where are you coming from?"
-        @origin = gets.chomp
-        #@output.gets("717a California Street CA 94108")
-        @output.puts "Where are you going to?"
-        @destination = gets.chomp
-        #@output.gets("3773 Mission Street CA 94110")
-        search_query_google_xml
+      @output.puts "Welcome to Drive Or Not!"
+      @output.puts "When are you leaving? Please enter in mm/dd/yy hh:mm format"
+      #@output.gets(Time.now)
+      @departure_time = gets.chomp
+      @output.puts "Where are you coming from?"
+      @origin = gets.chomp
+      #@output.gets("717a California Street CA 94108")
+      @output.puts "Where are you going to?"
+      @destination = gets.chomp
+      #@output.gets("3773 Mission Street CA 94110")
+      search_query_google_xml
     end
 
     # def search_query_json
@@ -89,7 +86,6 @@ module Driveornot
             # drive_time = doc_drive.css("duration text").last.text
             # drive_distance = doc_drive.css("distance text").last.text
             # puts "Driving Distance: #{drive_distance}, Driving Time: #{drive_time}"
-
        else
          puts doc_transit.css("status").text
        end
@@ -100,11 +96,8 @@ module Driveornot
 
        # @dep_stn_abr
        #        @arr_stn_abr
-
        bart_stations
        bart_fare_query
-
-
       end
 
       def bart_stations
@@ -116,7 +109,6 @@ module Driveornot
 
         @bart_stns_stn = @bart_stns.css("stations station")
 
-
         @bart_stns_stn.each do |stn|
 
             if stn.css("name").text.eql? @departure_stop
@@ -126,7 +118,6 @@ module Driveornot
             #else
               #raise "Station #{stn} doesn't exist"
             end
-
         end
         puts @dep_stn_abbr
         puts @arr_stn_abbr
@@ -138,9 +129,7 @@ module Driveornot
         fare_xml = Nokogiri::XML(fare_query)
         @fare = fare_xml.css("trip fare").text
         puts "BART Fare #{@fare}"
-
       end
-
 
 
       private
