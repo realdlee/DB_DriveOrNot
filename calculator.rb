@@ -4,6 +4,7 @@ class Trip
 end
 
 class Calculator
+  #BUG BUG - get rid of the attr_accessor for weather
   attr_accessor :orig_address, :dest_address, :weather
 
   def initialize(orig_address, dest_address)
@@ -24,6 +25,7 @@ class Calculator
     # @gasfee = Trip.iwillgiveyougasfeemethod
     # @transittime = Trip.iwillgiveyoutrasittimemethod
     # @drivingtime = Trip.iwillgiveyoudrivingtimemethod
+    #BUG BUG - add a return value down here and update the tests to evaluate the return value
   end
 
   def result
