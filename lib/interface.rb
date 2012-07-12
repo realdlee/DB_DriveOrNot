@@ -43,14 +43,14 @@ module Driveornot
 
      def search_query_google_xml
 
-       # uri_transit = URI("http://maps.googleapis.com/maps/api/directions/xml?")
-       #        uri_drive = URI("http://maps.googleapis.com/maps/api/directions/xml?")
-       #        params_transit = { :mode => 'transit', :origin => @origin, :destination => @destination, :departureTime => @departure_time, :sensor => false }
-       #        params_drive = { :mode => 'driving', :origin => @origin, :destination => @destination, :departureTime => @departure_time, :sensor => false }
-       #        uri_transit.query = URI.encode_www_form(params_transit)
-       #        uri_drive.query = URI.encode_www_form(params_drive)
+         uri_transit = URI("http://maps.googleapis.com/maps/api/directions/xml?")
+                     uri_drive = URI("http://maps.googleapis.com/maps/api/directions/xml?")
+                     params_transit = { :mode => 'transit', :origin => @origin, :destination => @destination, :departureTime => @departure_time, :sensor => false }
+                     params_drive = { :mode => 'driving', :origin => @origin, :destination => @destination, :departureTime => @departure_time, :sensor => false }
+                     uri_transit.query = URI.encode_www_form(params_transit)
+                     uri_drive.query = URI.encode_www_form(params_drive)
 
-       #puts uri_transit
+              puts uri_transit
        #        puts uri_drive.query
 
        # xml_transit = get_url(uri_transit)  #Google API call
