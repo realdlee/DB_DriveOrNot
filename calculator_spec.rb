@@ -12,17 +12,16 @@ describe "#initialize" do
     @test.orig_address.should == "717 california st,sf"
     @test.dest_address.should == "25 duboce ave,sf"
   end
-
 end
 
-describe "#sending_info" do
+describe "#create_trip" do
   before :each do
     @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
-    @test.sending_info
+    @test.create_trip
   end
 
   it "sends infomation to trip class" do
-    @test.should respond_to(:sending_info)
+    @test.should respond_to(:create_trip)
   end
 end
 
@@ -35,16 +34,20 @@ describe "#get_info" do
   it "sends infomation to trip class" do
     @test.should respond_to(:get_info)
   end
+end
 
-  # describe "#result" do
-  #   before :each do
-  #     @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
-  #     @test.result
-  #   end
-  #
-  #   it "calculates " do
-  #     @test.should respond_to(:get_info)
-  #   end
+describe "#result" do
+  before :each do
+    @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
 
+  end
+
+  it "receives weather variable" do
+    a_fake_trip = double('trip')
+    Trip.stub(:new).and_return(a_fake_trip)
+    a_fake_trip.stub(:weather_info).and_return('its rainy')
+    @test.get_info
+    @test.weather.should == "its rainy"
+  end
 end
 

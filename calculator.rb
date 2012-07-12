@@ -1,21 +1,33 @@
+class Trip
+  def weather_info
+  end
+end
+
 class Calculator
-  attr_accessor :orig_address, :dest_address
+  attr_accessor :orig_address, :dest_address, :weather
 
   def initialize(orig_address, dest_address)
     @orig_address = orig_address
     @dest_address = dest_address
   end
 
-  def sending_info
+  def create_trip
     # @send_trip = Trip.new(@orig_address, @dest_address)
   end
 
   def get_info
-    # @get_info = Trip.iwillgiveyouweathermethod
-    # @get_info = Trip.iwillgiveyoufaremethod
-    # @get_info = Trip.iwillgiveyougasmethod
-    # @get_info = Trip.iwillgiveyoutimemethod
-    # @get_info = Trip.iwillgiveyouweathermethod
+    @trip = Trip.new
+    @weather = @trip.weather_info
+    # @weather = Trip.iwillgiveyouweathermethod
+    # @walkingdistance = Trip.iwillgiveyouwalkingdistancemethod
+    # @fare = Trip.iwillgiveyoufaremethod
+    # @gasfee = Trip.iwillgiveyougasfeemethod
+    # @transittime = Trip.iwillgiveyoutrasittimemethod
+    # @drivingtime = Trip.iwillgiveyoudrivingtimemethod
+  end
+
+  def result
+
   end
 
 end
