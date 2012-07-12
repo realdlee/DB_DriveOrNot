@@ -13,9 +13,9 @@ describe "Trip" do
     end
   end
 
-  context "#json" do
-    it "should deliver a JSON object" do
-      trip.response.should be_instance_of Hash
+  context "#google API json" do
+    it "should deliver a JSON object from google directions API" do
+      trip.maps_response.should be_instance_of Hash
     end
   end
 

@@ -10,4 +10,5 @@ group :production do
   gem "rest-client"
   gem "json"
   gem "crack"
+  gem "activerecord"
 end
