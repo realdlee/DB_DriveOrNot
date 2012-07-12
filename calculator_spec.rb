@@ -26,15 +26,25 @@ describe "#sending_info" do
   end
 end
 
-# describe "#" do
-#   before :each do
-#     @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
-#     @test.sending_info
-#   end
-#
-#   it "sends infomation to trip class" do
-#     @test.should respond_to(:sending_info)
-#   end
+describe "#get_info" do
+  before :each do
+    @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
+    @test.get_info
+  end
+
+  it "sends infomation to trip class" do
+    @test.should respond_to(:get_info)
+  end
+
+  # describe "#result" do
+  #   before :each do
+  #     @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
+  #     @test.result
+  #   end
+  #
+  #   it "calculates " do
+  #     @test.should respond_to(:get_info)
+  #   end
 
 end
 
