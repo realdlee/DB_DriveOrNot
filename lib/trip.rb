@@ -15,7 +15,9 @@ module MapsAPIClient
 
   def self.response
     {:duration => @response_hash[:routes][0][:legs][0][:duration][:value],
-     :distance => @response_hash[:routes][0][:legs][0][:distance][:value]
+     :distance => @response_hash[:routes][0][:legs][0][:distance][:value],
+     :arrival_stop_name =>"foo",
+     :departure_stop_name => "bar"
     }
   end
 end
@@ -39,13 +41,17 @@ class Trip
     @response[:distance]
   end
 
+  def cost
+    @response[:cost]
+  end
+end
 
   # --- change a wee bit ------ #
-module MapsAPIClient
+module BARTAPIClient
   BART_URL = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=" + BART_API_KEY
 
   def bart_stations
-    bart_uri = URI("http://api.bart.gov/api/stn.aspx?cmd=stns&key=" + BART_API_KEY)
+    bart_uri = URI(BART_URL )
 
     bart_stns_xml = get_url(bart_uri)
     #puts bart_stns_xml
@@ -55,14 +61,15 @@ module MapsAPIClient
 
     @bart_stns_stn.each do |stn|
 
-        if stn.css("name").text.eql? @departure_stop
-            @dep_stn_abbr = stn.css("abbr").text
-        elsif stn.css("name").text.eql? @arrival_stop
-            @arr_stn_abbr = stn.css("abbr").text
+      if stn.css("name").text.eql? @departure_stop
+          @dep_stn_abbr = stn.css("abbr").text
+      elsif stn.css("name").text.eql? @arrival_stop
+          @arr_stn_abbr = stn.css("abbr").text
         #else
           #raise "Station #{stn} doesn't exist"
-        end
+      end
     end
+  end
 
   def bart_fare_query
     fare_uri = URI("http://api.bart.gov/api/sched.aspx?cmd=fare&orig=#{@dep_stn_abbr}&dest=#{@arr_stn_abbr}&key=#{BART_API_KEY}")
@@ -71,5 +78,4 @@ module MapsAPIClient
     @fare = fare_xml.css("trip fare").text
     puts "BART Fare #{@fare}"
   end
-
 end
