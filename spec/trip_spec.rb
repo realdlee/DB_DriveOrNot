@@ -1,23 +1,39 @@
-# David's attempt at 11pm
+require './lib/trip'
 
-require '../lib/trip.rb'
-include DriveOrNot
-require 'simplecov'
-require 'rspec'
-SimpleCov.start
+describe "Trip" do
+  let(:trip) { Trip.new(:origin => "717 California St., San Francisco, CA", :destination => "3773 Mission St., San Francisco, CA") }
 
-describe "#initialize" do
-  it "should receive a starting address and a destination address" do
-    @sample_trip = Trip.new("717 California Street, San Francisco, CA 94108", "1524 McAllister Street, San Francisco, CA")
-    @sample_trip.should be_an_instance_of Trip
+  context "#initialize" do
+    it "raises error without origin and destination in options hash" do
+      lambda { Trip.new(:foo => "bar") }.should raise_error BadArgumentException
+    end
+
+    it "needs a destination and origin parameters" do
+      lambda { Trip.new(:destination => "bar", :origin => "sdgdfhSD") }.should_not raise_error BadArgumentException
+    end
   end
-end
 
-describe "Google Maps API" do
-  it "should calculate the travel time between the two addresses" do
+  context "#google API json" do
+    it "should deliver a JSON object from google directions API" do
+      trip.maps_response.should be_instance_of Hash
+    end
   end
-  
-end
 
+  context "duration" do
+    it "should give us a value for time traveled" do
+      trip.duration.should be_instance_of Fixnum
+    end
+  end
 
+  context "distance" do
+    it "should give us a distance for length traveled" do
+      trip.distance.should be_instance_of Fixnum
+    end
+  end
+
+  context "travel cost" do
+    it "should provide us with the total fare cost for BART transit" do
+      trip.cost.should be_instance_of Fixnum
+    end
+  end
 end
