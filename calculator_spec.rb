@@ -39,15 +39,24 @@ end
 describe "#result" do
   before :each do
     @test = Calculator.new("717 california st,sf", "25 duboce ave,sf")
-
-  end
-
-  it "receives weather variable" do
     a_fake_trip = double('trip')
     Trip.stub(:new).and_return(a_fake_trip)
     a_fake_trip.stub(:weather_info).and_return('its rainy')
+    a_fake_trip.stub(:walking_info).and_return('3miles')
+    a_fake_trip.stub(:fare_info).and_return('$3.00')
     @test.get_info
+  end
+
+  it "receives weather variable" do
     @test.weather.should == "its rainy"
+  end
+
+  it "receives walking distance variable" do
+    @test.walking.should == "3miles"
+  end
+
+  it "receives walking distance variable" do
+     @test.fare.should == "$3.00"
   end
 end
 

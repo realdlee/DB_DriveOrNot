@@ -1,11 +1,17 @@
 class Trip
   def weather_info
   end
+
+  def walking_info
+  end
+
+  def fare_info
+  end
 end
 
 class Calculator
   #BUG BUG - get rid of the attr_accessor for weather
-  attr_accessor :orig_address, :dest_address, :weather
+  attr_accessor :orig_address, :dest_address, :weather, :walking, :fare
 
   def initialize(orig_address, dest_address)
     @orig_address = orig_address
@@ -19,6 +25,8 @@ class Calculator
   def get_info
     @trip = Trip.new
     @weather = @trip.weather_info
+    @walking = @trip.walking_info
+    @fare    = @trip.fare_info
     # @weather = Trip.iwillgiveyouweathermethod
     # @walkingdistance = Trip.iwillgiveyouwalkingdistancemethod
     # @fare = Trip.iwillgiveyoufaremethod
