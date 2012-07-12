@@ -15,7 +15,7 @@ describe "Trip" do
 
   context "#json" do
     it "should deliver a JSON object" do
-      trip.json_response.should be_instance_of Hash
+      trip.response.should be_instance_of Hash
     end
   end
 
