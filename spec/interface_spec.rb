@@ -27,11 +27,5 @@ module Driveornot
         transit.start
       end
      end
-   #
-   # context "#data validation" do
-   #   it "should have a departure time of a datetime format" do
-   #     transit.departure_time.should be(/\d{1,2}\-\d{1,2}\-\d{4}\s\d{1,2}\:\d{1,2}/)
-   #   end
-   # end
   end
 end
