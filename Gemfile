@@ -9,4 +9,5 @@ end
 group :production do
   gem "rest-client"
   gem "json"
+  gem "crack"
 end

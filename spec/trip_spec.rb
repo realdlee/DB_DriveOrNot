@@ -1,7 +1,7 @@
 require './lib/trip'
 
 describe "Trip" do
-  let(:trip) { Trip.new(:origin => "717 California St., San Francisco, CA", :destination => "2453 Grant St., San Francisco, CA") }
+  let(:trip) { Trip.new(:origin => "717 California St., San Francisco, CA", :destination => "3773 Mission St., San Francisco, CA") }
 
   context "#initialize" do
     it "raises error without origin and destination in options hash" do
@@ -13,7 +13,6 @@ describe "Trip" do
     end
   end
 
-  #moved to priveate method, so does not need to be tested
   context "#json" do
     it "should deliver a JSON object" do
       trip.json_response.should be_instance_of Hash
@@ -29,6 +28,12 @@ describe "Trip" do
   context "distance" do
     it "should give us a distance for length traveled" do
       trip.distance.should be_instance_of Fixnum
+    end
+  end
+
+  context "travel cost" do
+    it "should provide us with the total fare cost for BART transit" do
+      trip.cost.should be_instance_of Fixnum
     end
   end
 end
