@@ -44,6 +44,9 @@ describe "#result" do
     a_fake_trip.stub(:weather_info).and_return('its rainy')
     a_fake_trip.stub(:walking_info).and_return('3miles')
     a_fake_trip.stub(:fare_info).and_return('$3.00')
+    a_fake_trip.stub(:gas_info).and_return('$7.00')
+    a_fake_trip.stub(:transit_time_info).and_return('2mins')
+    a_fake_trip.stub(:driving_time_info).and_return('1mins')
     @test.get_info
   end
 
@@ -55,8 +58,20 @@ describe "#result" do
     @test.walking.should == "3miles"
   end
 
-  it "receives walking distance variable" do
+  it "receives bart fare variable" do
      @test.fare.should == "$3.00"
+  end
+
+  it "receives driving cost variable" do
+     @test.gas.should == "$7.00"
+  end
+
+  it "receives transit duration variable" do
+     @test.transit_time.should == "2mins"
+  end
+
+  it "receives driving duration variable" do
+     @test.driving_time.should == "1mins"
   end
 end
 
