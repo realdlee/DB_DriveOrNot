@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require './lib/interface.rb'
 
 module Driveornot
 
